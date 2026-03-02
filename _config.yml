@@ -1,12 +1,12 @@
 # Site settings
-title: Christian DiRubbio's Dev Blog
+title: dev.chrdir.com
 description: Thoughts on stuff and things
 url: "https://dev.chrdir.com"
 baseurl: ""
 
 # Author
 author:
-  name: Chris DiRubbo
+  name: Christian DiRubbio
   email: me@chrdir.com
 
 # Build settings
