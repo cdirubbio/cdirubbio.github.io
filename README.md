@@ -1,4 +1,4 @@
-# Chris DiRubbo's Dev Blog
+# dev.chrdir.com
 
 Personal blog built with Jekyll and hosted on GitHub Pages.
 
