@@ -1,0 +1,44 @@
+# Site settings
+title: Christian DiRubbio's Dev Blog
+description: Thoughts on stuff and things
+url: "https://dev.chrdir.com"
+baseurl: ""
+
+# Author
+author:
+  name: Chris DiRubbo
+  email: me@chrdir.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

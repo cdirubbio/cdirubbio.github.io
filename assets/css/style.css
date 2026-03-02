@@ -1,0 +1,277 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --bg: #ffffff;
+  --bg-alt: #f9fafb;
+  --border: #e5e7eb;
+  --code-bg: #f3f4f6;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* Main content */
+main {
+  padding: 3rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Post list */
+.post-list {
+  list-style: none;
+}
+
+.post-preview {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-preview:last-child {
+  border-bottom: none;
+}
+
+.post-preview h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.post-preview h2 a {
+  color: var(--text);
+}
+
+.post-preview h2 a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.post-preview time {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.post-preview p {
+  margin-top: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Post page */
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-header h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background: var(--bg-alt);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.tag:hover {
+  background: var(--border);
+  text-decoration: none;
+}
+
+/* Archive */
+.archive-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.archive-list li {
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.archive-list time {
+  color: var(--text-light);
+  min-width: 60px;
+  font-size: 0.9rem;
+}
+
+/* Code blocks */
+code {
+  background: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  nav ul {
+    gap: 1rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .post-preview h2 {
+    font-size: 1.5rem;
+  }
+  
+  .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
