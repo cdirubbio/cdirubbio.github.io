@@ -168,6 +168,25 @@ a:hover {
   border-radius: 4px;
 }
 
+/* Image size utilities */
+.post-content img.small {
+  max-width: 400px;
+}
+
+.post-content img.medium {
+  max-width: 600px;
+}
+
+.post-content img.large {
+  max-width: 800px;
+}
+
+.post-content img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .post-footer {
   margin-top: 3rem;
   padding-top: 2rem;
